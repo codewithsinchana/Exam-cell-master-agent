@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Cell Master Agent · DSCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orbs no-print" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="topbar no-print">
+  <div class="brand">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+    </div>
+    <div>
+      <strong>Exam Cell</strong>
+      <small>Master Agent</small>
+    </div>
+  </div>
+  <nav>
+    <a href="#agent">Agent</a>
+    <a href="#settings">Setup</a>
+    <a href="#results">Results</a>
+  </nav>
+  <span class="pill"><i></i> Online</span>
+</header>
+
+<main>
+  <section class="hero no-print" id="agent">
+    <p class="eyebrow">One command · Four deliverables</p>
+    <h1>Tell the agent what to plan.<br><span class="grad">It runs the whole exam.</span></h1>
+    <p class="sub">Type a request like <em>“Plan the CIE-2 for 5th sem”</em> and the Master Agent coordinates the timetable, seating arrangement, invigilation duty chart and every printable form.</p>
+
+    <div class="command">
+      <span class="prompt">▸</span>
+      <input id="cmd" type="text" value="Plan the CIE-2 for 5th sem" autocomplete="off" spellcheck="false" aria-label="Command">
+      <button id="run" class="btn-primary">Run agent <span>→</span></button>
+    </div>
+    <div class="chips">
+      <button class="chip" data-cmd="Plan the CIE-1 for 3rd sem">CIE-1 · 3rd sem</button>
+      <button class="chip" data-cmd="Plan the CIE-2 for 5th sem">CIE-2 · 5th sem</button>
+      <button class="chip" data-cmd="Plan the CIE-3 for 7th sem">CIE-3 · 7th sem</button>
+      <button class="chip" data-cmd="Plan the CIE-2 for 1st sem">CIE-2 · 1st sem</button>
+    </div>
+
+    <ol class="pipeline" id="pipeline">
+      <li data-step="0"><b>1</b><div><strong>Parse request</strong><small>Exam type &amp; semester</small></div></li>
+      <li data-step="1"><b>2</b><div><strong>Schedule agent</strong><small>Dates &amp; FN/AN sessions</small></div></li>
+      <li data-step="2"><b>3</b><div><strong>Seating agent</strong><small>Rooms &amp; benches</small></div></li>
+      <li data-step="3"><b>4</b><div><strong>Duty agent</strong><small>Fair invigilation</small></div></li>
+      <li data-step="4"><b>5</b><div><strong>Forms agent</strong><small>Print-ready papers</small></div></li>
+    </ol>
+  </section>
+
+  <section class="panel no-print" id="settings">
+    <details>
+      <summary><span>⚙ Exam cell setup</span><small>College details, timetable, rooms &amp; faculty — edit anything, then run again</small></summary>
+      <div class="grid-form">
+        <label>Institution<input id="inst" value="Dayananda Sagar College of Engineering"></label>
+        <label>Affiliation line<input id="affil" value="(An Autonomous Institute Affiliated to VTU, Belagavi)"></label>
+        <label>Address<input id="addr" value="Shavige Malleshwara Hills, Kumaraswamy Layout, Bengaluru-560078"></label>
+        <label>Department<input id="dept" value="Department of Computer Science and Engineering (Cyber Security)"></label>
+        <label>Academic year<input id="ay" value="2026–27 (Odd Semester)"></label>
+        <label>College logo <small>(optional — replaces assets/logo.png)</small><input id="logo" type="file" accept="image/*"></label>
+        <label>Forenoon (FN) start<input id="fnS" type="time" value="09:15"></label>
+        <label>Forenoon (FN) end<input id="fnE" type="time" value="10:45"></label>
+        <label>First exam date <small>(used when auto-generating other semesters)</small><input id="start" type="date" value="2026-11-03"></label>
+        <label>Afternoon (AN) start<input id="anS" type="time" value="13:45"></label>
+        <label>Afternoon (AN) end<input id="anE" type="time" value="15:15"></label>
+        <label>Students in class<input id="students" type="number" value="60" min="10" max="600"></label>
+        <label>Benches per room<input id="benches" type="number" value="15" min="4" max="40"></label>
+        <label>USN prefix<input id="prefix" value="1DS24CY"></label>
+        <label>Chief Superintendent<input id="cs" value="Dr. Principal"></label>
+        <label>Exam Cell Coordinator<input id="coord" value="Prof. S. Meenakshi"></label>
+        <label>Head of Department<input id="hod" value="Dr. HOD, CSE (Cyber Security)"></label>
+        <label class="wide">Timetable <small>(one paper per line: DD-MM-YYYY | FN or AN | CODE - Subject name — auto-filled from the semester)</small><textarea id="timetable" rows="7"></textarea></label>
+        <label class="wide">Faculty pool <small>(one per line)</small><textarea id="faculty" rows="6"></textarea></label>
+      </div>
+    </details>
+  </section>
+
+  <section class="results" id="results" hidden>
+    <div class="result-head no-print">
+      <div>
+        <p class="eyebrow" id="resEyebrow">Plan ready</p>
+        <h2 id="resTitle">CIE-2 · 5th Semester</h2>
+      </div>
+      <div class="actions">
+        <button class="btn-ghost" id="printBtn">🖨 Print this tab</button>
+        <button class="btn-ghost" id="csvBtn">⬇ Duty CSV</button>
+      </div>
+    </div>
+
+    <div class="tabs no-print" role="tablist">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="schedule">Schedule</button>
+      <button class="tab" data-tab="seating">Seating</button>
+      <button class="tab" data-tab="duty">Duty chart</button>
+      <button class="tab" data-tab="forms">Forms</button>
+    </div>
+
+    <div class="tabpanel active" id="tab-overview"></div>
+    <div class="tabpanel" id="tab-schedule"></div>
+    <div class="tabpanel" id="tab-seating"></div>
+    <div class="tabpanel" id="tab-duty"></div>
+    <div class="tabpanel" id="tab-forms"></div>
+  </section>
+</main>
+
+<footer class="no-print">
+  <span>Exam Cell Master Agent</span> · Runs entirely in your browser — no data leaves your device.
+</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
