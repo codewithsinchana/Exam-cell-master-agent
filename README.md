@@ -437,7 +437,7 @@ It also establishes a foundation for future enhancements involving artificial in
 The project is developed for the **Department of Computer Science and Engineering (Cyber Security), Dayananda Sagar College of Engineering, Bengaluru**, with the objective of making examination planning more efficient, organized and accessible.
 
 ---
-
+ **Name:** Sinchana T R 
 **Project:** Exam Cell Master Agent  
 **Department:** Computer Science and Engineering (Cyber Security)  
 **Institution:** Dayananda Sagar College of Engineering, Bengaluru  
