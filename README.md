@@ -163,6 +163,7 @@ Example:
 03-11-2026 | FN | 22CY51 - Software Engineering
 03-11-2026 | AN | 22CY52 - Computer Network and Security
 04-11-2026 | FN | 22CY53 - Essentials of Cyber Security
+04-11-2026 | AN | 22CY551 - Artificial Intelligence in Cyber Security
 ```
 
 This allows the application to process different examination schedules without modifying the source code.
