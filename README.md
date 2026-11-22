@@ -434,7 +434,7 @@ The application reduces repetitive administrative work, improves accessibility o
 
 It also establishes a foundation for future enhancements involving artificial intelligence, automated conflict detection, database integration and intelligent examination planning.
 
-The project is developed for the **Department of Computer Science and Engineering (Cyber Security), Dayananda Sagar College of Engineering, Bengaluru**, with the objective of making examination planning more efficient, organized and accessible.
+The project is developed by **Sinchana T R** for the **Department of Computer Science and Engineering (Cyber Security), Dayananda Sagar College of Engineering, Bengaluru**, with the objective of making examination planning more efficient, organized and accessible.
 
 ---
  **Name:** Sinchana T R 
