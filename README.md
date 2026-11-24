@@ -55,7 +55,7 @@ The project focuses on improving administrative efficiency, reducing repetitive 
 - Displays the timetable in the department's examination format.
 - Provides both a complete timetable and a paper-wise schedule.
 
-### 2.2 Automated Student Seating Arrangement
+### 2.2 Automated Student Seating Arrangement : 
 
 - Generates room-wise seating arrangements for students.
 - Distributes students across available examination rooms.
