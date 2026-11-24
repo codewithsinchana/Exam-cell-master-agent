@@ -310,7 +310,7 @@ The application will open in your default browser.
 4. Enter the examination date, session, subject code and subject name.
 5. Save or apply the configuration using the available interface.
 
-### Updating the College Logo
+### Updating the College Logo : 
 
 1. Open Exam Cell Setup.
 2. Locate the college logo upload option.
