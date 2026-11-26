@@ -1,6 +1,6 @@
 # Exam Cell Master Agent : 
 
-### Intelligent Examination Planning and Management System
+### Intelligent Examination Planning and Management System :
 
 A centralized, browser-based examination management application designed for the Department of Computer Science and Engineering (Cyber Security), Dayananda Sagar College of Engineering.
 
