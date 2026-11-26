@@ -8,7 +8,7 @@ The **Exam Cell Master Agent** simplifies examination administration by bringing
 
 Instead of manually preparing multiple examination documents, users can simply enter a command such as:
 
-**"Plan the CIE-2 for 5th sem"**
+**"Plan the CIE-2 for 5th sem"** :
 
 The system processes the configured examination information and organizes the required examination schedules, seating arrangements, faculty duty charts and printable forms.
 
