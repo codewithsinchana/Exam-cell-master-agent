@@ -45,7 +45,7 @@ The application provides an interactive dashboard where examination details can 
 
 The project focuses on improving administrative efficiency, reducing repetitive work and simplifying examination planning.
 
-## 2. Key Features
+## 2. Key Features :
 
 ### 2.1 Intelligent Examination Scheduling
 
