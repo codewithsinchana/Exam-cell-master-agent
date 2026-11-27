@@ -73,7 +73,7 @@ The project focuses on improving administrative efficiency, reducing repetitive 
 - Includes a fairness meter to review duty allocation.
 - Supports CSV export of invigilation duty information.
 
-### 2.4 Automated Examination Documentation
+### 2.4 Automated Examination Documentation : 
 
 The system generates commonly required examination documents in structured, printable formats.
 
