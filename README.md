@@ -47,7 +47,7 @@ The project focuses on improving administrative efficiency, reducing repetitive 
 
 ## 2. Key Features :
 
-### 2.1 Intelligent Examination Scheduling
+### 2.1 Intelligent Examination Scheduling : 
 
 - Generates structured examination timetables.
 - Supports Forenoon (FN) and Afternoon (AN) sessions.
